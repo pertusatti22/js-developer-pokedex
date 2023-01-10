@@ -17,8 +17,8 @@ evoluir o projeto da POKEDEX com as seguintes funcionalidades:
 - [x] Evoluir pokemon-model para apresentar itens de 'About';
 - [x] Implementar tela com os detalhes 'Base Stats' do protótipo;
 - [x] Evoluir pokemon-model para apresentar itens de 'Base Stats';
-- [ ] Implementar tela com os detalhes 'Moves' do protótipo;
-- [ ] Evoluir pokemon-model para apresentar itens de 'Moves';
+- [x] Implementar tela com os detalhes 'Moves' do protótipo;
+- [x] Evoluir pokemon-model para apresentar itens de 'Moves';
 - [ ] Implementar tela com os detalhes 'Evolution' do protótipo;
 - [ ] Consumir endpoint de Evolution https://pokeapi.co/api/v2/evolution-chain/{id}/
 

@@ -13,4 +13,6 @@ class Pokemon {
     stats = [];
     base_stat;
     base_stats = [];
+    move;
+    moves = [];
 }

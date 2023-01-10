@@ -35,6 +35,12 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
     pokemon.base_stats = base_stats
     pokemon.base_stat = base_stat
 
+    const moves = pokeDetail.moves.map((moveSlot) => moveSlot.move.name)
+    const [move] = moves
+
+    pokemon.moves = moves
+    pokemon.move = move
+
     return pokemon
 }
 
