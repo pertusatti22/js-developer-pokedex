@@ -62,18 +62,13 @@ loadMoreButton.addEventListener('click', () => {
 
 function convertPokemonToDiv(pokemon) {
     return `
-        <h1>Pokemon</h1>
+        <h1>${pokemon.name}</h1>
         
         <button onclick="returnPage()" type="button" class="back">Voltar</button>
         
-        <div class="pokemon ${pokemon.type}">
-        
+        <div class="pokemon ${pokemon.type}">     
             <span class="number">#${pokemon.number}</span>
             <span class="name">${pokemon.name}</span>
-
-            
-           
-
             <div class="detail">
                 <ol class="types">
                     ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
@@ -82,8 +77,34 @@ function convertPokemonToDiv(pokemon) {
                 <img src="${pokemon.photo}"
                      alt="${pokemon.name}">
             </div>
-            
         </div>
+        <div>
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'About')">About</button>
+            <button class="tablinks" onclick="openTab(event, 'BaseStats')">Base Stats</button>
+            <button class="tablinks" onclick="openTab(event, 'Evolution')">Evolution</button>
+        </div>
+
+        <div id="About" class="tabcontent">
+           
+        <span class="species">Height: ${pokemon.height}</span></br>
+        <span class="species">Weight: ${pokemon.weight}</span></br>
+        <span class="species">Abilities: </span> ${pokemon.abilities.map((ability) => `<span class="ability ${ability}">${ability}</span>`).join(', ')}
+        
+        </div>
+
+        <div id="BaseStats" class="tabcontent">
+            <h3>BaseStats</h3>
+            <p>Base Stats</p>
+        </div>
+
+        <div id="Evolution" class="tabcontent">
+            <h3>Evolution</h3>
+            <p>Evolution</p>
+        </div>
+        
+        
+</div>
     `
 }
 
@@ -91,8 +112,23 @@ async function loadPokemonDetails(id) {
     const pokemon = await pokeApi.getPokemon(id);
     pokedex.classList.add('turnoff');
     pokemonDetail.classList.remove('turnoff');
-    pokemonDetail.innerHTML += convertPokemonToDiv(pokemon)
     console.log(pokemon);
+    pokemonDetail.innerHTML += convertPokemonToDiv(pokemon)
 }
 
 
+function openTab(event, tabName) {
+    let i, tabcontent, tablinks;
+
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    event.currentTarget.className += " active";
+}
