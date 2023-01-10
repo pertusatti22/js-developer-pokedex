@@ -19,6 +19,8 @@ evoluir o projeto da POKEDEX com as seguintes funcionalidades:
 - [x] Evoluir pokemon-model para apresentar itens de 'Base Stats';
 - [x] Implementar tela com os detalhes 'Moves' do protótipo;
 - [x] Evoluir pokemon-model para apresentar itens de 'Moves';
-- [ ] Implementar tela com os detalhes 'Evolution' do protótipo;
-- [ ] Consumir endpoint de Evolution https://pokeapi.co/api/v2/evolution-chain/{id}/
+- [X] Refatorar estilo para melhorar a apresentação dos detalhes.
 
+Ainda ficaram faltando bastante itens para melhorar e diversos itens que não vem no mesmo endpoint,
+porém se investir mais tempo nesse projeto não vou conseguir avançar nos outros módulos do bootcamp
+então encerro aqui a evolução dele

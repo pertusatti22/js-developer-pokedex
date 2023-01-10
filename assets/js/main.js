@@ -83,7 +83,6 @@ function convertPokemonToDiv(pokemon) {
             <button class="tablinks" onclick="openTab(event, 'About')">About</button>
             <button class="tablinks" onclick="openTab(event, 'BaseStats')">Base Stats</button>          
             <button class="tablinks" onclick="openTab(event, 'Moves')">Moves</button>
-            <button class="tablinks" onclick="openTab(event, 'Evolution')">Evolution</button>
         </div>
 
         <div id="About" class="tabcontent">
@@ -95,7 +94,7 @@ function convertPokemonToDiv(pokemon) {
         </div>
 
         <div id="BaseStats" class="tabcontent">
-            <h3>BaseStats</h3>
+          
             <div class="stats">        
                 <div class="stats-label">
                     <ol class="stats-list">
@@ -111,18 +110,12 @@ function convertPokemonToDiv(pokemon) {
         </div>
 
         <div id="Moves" class="tabcontent">
-            <h3>Moves</h3>
+       
             <ol class="moves">
                     ${pokemon.moves.map((move) => `<li class="move ${move}">${move}</li>`).join('')}
             </ol>
-        </div>
-        
-        <div id="Evolution" class="tabcontent">
-            <h3>Evolution</h3>
-            <p>Evolution</p>
-        </div>
-        
-       
+        </div>      
+
 </div>
     `
 }

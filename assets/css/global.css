@@ -33,12 +33,12 @@ button {
 
 .tab {
     overflow: hidden;
-    border: 1px solid #ccc;
+    border: 1px solid #ffffff;
+    border-radius: 25px;
     background-color: #f1f1f1;
 }
 
 .tab button {
-    background-color: inherit;
     float: left;
     border: none;
     outline: none;
@@ -48,18 +48,24 @@ button {
 }
 
 .tab button:hover {
-    background-color: #ddd;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid blue;
 }
 
 .tab button.active {
-    background-color: #ccc;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid darkblue;
 }
 
 .tabcontent {
     display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
+    padding: 32px 48px;
     border-top: none;
+    font-size: 12px;
+}
+
+.moves, .stats-list{
+    list-style: none;
 }
 
 .stats {
