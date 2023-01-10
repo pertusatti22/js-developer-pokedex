@@ -95,7 +95,18 @@ function convertPokemonToDiv(pokemon) {
 
         <div id="BaseStats" class="tabcontent">
             <h3>BaseStats</h3>
-            <p>Base Stats</p>
+            <div class="stats">        
+                <div class="stats-label">
+                    <ol class="stats-list">
+                            ${pokemon.stats.map((stat) => `<li class="stat ${stat}">${stat}</li>`).join('')}
+                    </ol>
+                </div>
+                <div class="stats-value">
+                    <ol class="stats-list">
+                            ${pokemon.base_stats.map((base_stat) => `<li class="base_stat ${base_stat}">${base_stat}</li>`).join('')}
+                    </ol>
+                </div>
+            </div>
         </div>
 
         <div id="Evolution" class="tabcontent">

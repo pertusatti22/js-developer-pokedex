@@ -15,8 +15,8 @@ evoluir o projeto da POKEDEX com as seguintes funcionalidades:
 - [x] Implementar botão de voltar, para retornar a página inicial;
 - [x] Implementar tela com os detalhes 'About' do protótipo;
 - [x] Evoluir pokemon-model para apresentar itens de 'About';
-- [ ] Implementar tela com os detalhes 'Base Stats' do protótipo;
-- [ ] Evoluir pokemon-model para apresentar itens de 'Base Stats';
+- [x] Implementar tela com os detalhes 'Base Stats' do protótipo;
+- [x] Evoluir pokemon-model para apresentar itens de 'Base Stats';
 - [ ] Implementar tela com os detalhes 'Moves' do protótipo;
 - [ ] Evoluir pokemon-model para apresentar itens de 'Moves';
 - [ ] Implementar tela com os detalhes 'Evolution' do protótipo;

@@ -61,3 +61,10 @@ button {
     border: 1px solid #ccc;
     border-top: none;
 }
+
+.stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
